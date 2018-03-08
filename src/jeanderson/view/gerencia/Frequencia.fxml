@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="526.0" prefWidth="714.0" stylesheets="@../../assets/style/TableView.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.gerencia.FrequenciaController">
+   <children>
+      <TableView fx:id="tvFrequencia" layoutX="14.0" layoutY="106.0" onMouseClicked="#mouseClickFrequencia" prefHeight="357.0" prefWidth="686.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="106.0">
+         <columns>
+            <TableColumn fx:id="tcMatricula" prefWidth="75.0" text="Matrícula" />
+            <TableColumn fx:id="tcAluno" prefWidth="322.0" text="Aluno" />
+            <TableColumn fx:id="tcCurso" prefWidth="182.0" text="Curso" />
+            <TableColumn fx:id="tcConcluido" prefWidth="92.0" text="Concluído (%)" />
+         </columns>
+      </TableView>
+      <JFXButton buttonType="RAISED" layoutX="617.0" layoutY="24.0" onAction="#actionAtualizar" style="-fx-background-color: #474747;" text="Atualizar" textFill="WHITE" AnchorPane.rightAnchor="19.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="540.0" layoutY="24.0" onAction="#actionFiltrar" style="-fx-background-color: #474747;" text="Filtrar" textFill="WHITE" AnchorPane.rightAnchor="116.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtMatricula" focusColor="#eb1e0b" labelFloat="true" layoutX="14.0" layoutY="75.0" prefHeight="21.0" prefWidth="76.0" promptText="Matricula">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtAluno" focusColor="#eb1e0b" labelFloat="true" layoutX="91.0" layoutY="75.0" prefHeight="29.0" prefWidth="317.0" promptText="Aluno">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbCurso" focusColor="#eb2f12" labelFloat="true" layoutX="411.0" layoutY="75.0" prefHeight="29.0" prefWidth="181.0" promptText="Curso" />
+      <JFXComboBox fx:id="cbConcluido" focusColor="#eb2f12" labelFloat="true" layoutX="593.0" layoutY="75.0" prefHeight="29.0" prefWidth="106.0" promptText="Concluído" />
+      <JFXTextField fx:id="txtLimite" focusColor="#1746d3" labelFloat="true" layoutX="616.0" layoutY="474.0" prefHeight="21.0" prefWidth="83.0" promptText="Limite" text="50" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="15.0" />
+      <JFXButton buttonType="RAISED" layoutX="15.0" layoutY="471.0" onAction="#actionNovaFrequencia" style="-fx-background-color: #474747;" text="Nova Frequência" textFill="WHITE" AnchorPane.bottomAnchor="24.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="809.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="admin.AdminLogs">
+   <children>
+      <Text layoutX="287.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Logs do Sistema">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextArea fx:id="txtLog" editable="false" layoutX="85.0" layoutY="59.0" prefHeight="598.0" prefWidth="639.0" wrapText="true" />
+      <JFXButton layoutX="528.0" layoutY="675.0" onAction="#actionExcluir" prefHeight="40.0" prefWidth="196.0" ripplerFill="WHITE" style="-fx-background-color: #404040;" text="Excluir Log" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

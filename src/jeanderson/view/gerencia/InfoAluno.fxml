@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="788.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.gerencia.InfoAlunoController">
+   <children>
+      <AnchorPane prefHeight="68.0" prefWidth="644.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="219.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações do Aluno">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutX="90.0" layoutY="149.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="68.0">
+         <tabs>
+            <Tab text="Informações">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtMatricula" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="24.0" promptText="Matrícula">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtNome" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="68.0" prefHeight="27.0" prefWidth="503.0" promptText="Nome">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Text layoutX="270.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Matrícula:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="dpMatricula" editable="false" layoutX="402.0" layoutY="25.0" />
+                        <JFXTextField fx:id="txtCPF" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="115.0" promptText="CPF">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtRG" editable="false" focusColor="#095bff" labelFloat="true" layoutX="399.0" layoutY="115.0" promptText="RG">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <Text layoutX="242.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="dpNascimento" editable="false" layoutX="399.0" layoutY="161.0" />
+                        <JFXTextField fx:id="txtTelefone" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="207.0" promptText="Telefone">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCelular" editable="false" focusColor="#095bff" labelFloat="true" layoutX="399.0" layoutY="207.0" promptText="Celular">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtEndereco" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="257.0" prefHeight="27.0" prefWidth="503.0" promptText="Endereço">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtBairro" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="304.0" prefHeight="24.0" prefWidth="371.0" promptText="Bairro">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtCidade" editable="false" focusColor="#095bff" labelFloat="true" layoutX="71.0" layoutY="354.0" prefHeight="24.0" prefWidth="371.0" promptText="Cidade">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtUF" editable="false" focusColor="#095bff" labelFloat="true" layoutX="531.0" layoutY="354.0" prefHeight="24.0" prefWidth="43.0" promptText="UF">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXCheckBox fx:id="ccResponsavel" layoutX="71.0" layoutY="411.0" text="É responsável" />
+                        <JFXTextField fx:id="txtResponsavelPor" editable="false" focusColor="#095bff" labelFloat="true" layoutX="196.0" layoutY="404.0" prefHeight="24.0" prefWidth="371.0" promptText="Por">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextArea fx:id="txtObservacao" editable="false" layoutX="74.0" layoutY="458.0" prefHeight="71.0" prefWidth="517.0" promptText="Observações" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextArea>
+                        <JFXTextField fx:id="txtMatriculadoPor" editable="false" focusColor="#095bff" labelFloat="true" layoutX="74.0" layoutY="562.0" prefHeight="24.0" prefWidth="520.0" promptText="Matrículado Por">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btnEditarInfo" buttonType="RAISED" layoutX="350.0" layoutY="616.0" onAction="#actionEditarInformacoes" style="-fx-background-color: #474747;" text="Editar Informações" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="527.0" layoutY="616.0" onAction="#actionExcluirAluno" style="-fx-background-color: #474747;" text="Excluir" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Histórico">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="tvHistorico" layoutX="19.0" layoutY="25.0" prefHeight="210.0" prefWidth="607.0">
+                           <columns>
+                              <TableColumn fx:id="tcCurso" prefWidth="174.0" text="Curso" />
+                              <TableColumn fx:id="tcDataMatriculaCurso" prefWidth="179.0" text="Data de Matricula no Curso" />
+                              <TableColumn fx:id="tcDataConcluido" prefWidth="130.0" text="Data de Conclusão" />
+                              <TableColumn fx:id="tcSituacao" prefWidth="120.0" text="Situação" />
+                           </columns>
+                        </TableView>
+                        <JFXButton buttonType="RAISED" layoutX="333.0" layoutY="244.0" onAction="#actionNovoHistorico" style="-fx-background-color: #474747;" text="Novo Histórico" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="477.0" layoutY="244.0" onAction="#actionEditar" style="-fx-background-color: #474747;" text="Editar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="558.0" layoutY="244.0" onAction="#actionExcluir" style="-fx-background-color: #474747;" text="Excluir" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Separator fx:id="spLado1" layoutY="352.0" prefWidth="200.0" />
+                        <Separator fx:id="spLado2" layoutX="416.0" layoutY="352.0" prefHeight="3.0" prefWidth="228.0" />
+                        <Label fx:id="lbEditarHistorico" layoutX="258.0" layoutY="343.0" text="Editar Histórico">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Separator fx:id="spBaixo" layoutX="2.0" layoutY="560.0" prefHeight="4.0" prefWidth="413.0" />
+                        <JFXButton fx:id="btnSalvar" buttonType="RAISED" layoutX="447.0" layoutY="535.0" onAction="#actionSalvar" style="-fx-background-color: #474747;" text="Salvar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCancelar" buttonType="RAISED" layoutX="541.0" layoutY="535.0" onAction="#actionCancelar" style="-fx-background-color: #474747;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXComboBox fx:id="cbCurso" editable="true" labelFloat="true" layoutX="19.0" layoutY="369.0" prefHeight="24.0" prefWidth="256.0" promptText="Curso Referente" />
+                        <Text fx:id="textDataMatricula" layoutX="26.0" layoutY="437.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Matrícula:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="dpHistoricoMatricula" layoutX="165.0" layoutY="419.0" />
+                        <Text fx:id="textDataConclusao" layoutX="19.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Conclusão:">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXDatePicker fx:id="dpHistoricoConclusao" layoutX="165.0" layoutY="459.0" />
+                        <JFXComboBox fx:id="cbSituacao" labelFloat="true" layoutX="19.0" layoutY="508.0" prefHeight="24.0" prefWidth="256.0" promptText="Situação:" />
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+   <stylesheets>
+      <URL value="@../../assets/style/TabPane.css" />
+      <URL value="@../../assets/style/TableView.css" />
+   </stylesheets>
+</AnchorPane>

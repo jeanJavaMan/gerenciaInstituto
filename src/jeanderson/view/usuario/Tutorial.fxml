@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTreeView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="811.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.usuario.TutorialController">
+   <children>
+      <AnchorPane prefHeight="45.0" prefWidth="925.0" style="-fx-background-color: #474747;">
+         <children>
+            <Text fill="WHITE" layoutX="364.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tutoriais do Programa">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text layoutX="46.0" layoutY="568.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione o que deseja ver:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <WebView fx:id="wbVideo" layoutX="46.0" layoutY="69.0" prefHeight="469.0" prefWidth="833.0" />
+      <Text layoutX="651.0" layoutY="794.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Obs: é necessário conexão com a internet." />
+      <ImageView fx:id="ivFundo" fitHeight="498.0" fitWidth="833.0" layoutX="46.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../assets/img/tutorialFundo.png" />
+         </image>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <JFXTreeView fx:id="tvTutoriais" layoutX="46.0" layoutY="572.0" onMouseClicked="#mouseClickSelecionaTutorial" prefHeight="200.0" prefWidth="833.0" stylesheets="@../../assets/style/TreeView.css" />
+   </children>
+</AnchorPane>

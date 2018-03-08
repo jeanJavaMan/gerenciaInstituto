@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="842.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.HomeController">
+   <children>
+      <SplitPane dividerPositions="0.35" prefHeight="800.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #474747;" stylesheets="@../assets/style/homeUsuario.css">
+               <children>
+                  <AnchorPane prefHeight="145.0" prefWidth="353.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="415.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <image>
+                              <Image url="@../assets/img/usuario_logado_background.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="60.0" layoutX="14.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/usuario_logado_icon.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="72.0" layoutY="72.0" text="Nome:" textFill="#f8f8f8">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="72.0" layoutY="98.0" text="Função:" textFill="#f8f8f8">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="lbNomeUsuario" layoutX="127.0" layoutY="72.0" text="nome do usuário" textFill="#f8f7f7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow color="#eeebeb" />
+                           </effect>
+                        </Label>
+                        <Label fx:id="lbFuncaoUsuario" layoutX="133.0" layoutY="99.0" text="função do usuário" textFill="#f8f7f7">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <effect>
+                              <DropShadow color="#fcf6f6" />
+                           </effect>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="148.0" layoutY="164.0" text="Meus Lembretes" textFill="#f5f5f5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="171.0" prefHeight="4.0" prefWidth="127.0" AnchorPane.leftAnchor="0.0" />
+                  <Separator layoutX="288.0" layoutY="171.0" prefHeight="4.0" prefWidth="127.0" AnchorPane.leftAnchor="288.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXDatePicker fx:id="dpLembretes" defaultColor="#dd0909" layoutX="114.0" layoutY="193.0" onAction="#actionSelecionaDataLembrete" promptText="Data do Lembrete" />
+                  <JFXListView fx:id="lvLembretes" layoutX="22.0" layoutY="225.0" onMouseClicked="#mouseClickLembrete" prefHeight="350.0" prefWidth="309.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="22.0" />
+                  <JFXButton buttonType="RAISED" layoutX="22.0" layoutY="584.0" onAction="#actionVerTodosLembretes" style="-fx-background-color: white;" text="Ver Todos" textFill="#030000">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <Separator layoutY="645.0" prefHeight="4.0" prefWidth="140.0" />
+                  <Label layoutX="154.0" layoutY="636.0" text="Meus Contatos" textFill="#f5f5f5">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="275.0" layoutY="645.0" prefHeight="4.0" prefWidth="140.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="0.0" />
+                  <JFXButton buttonType="RAISED" layoutX="14.0" layoutY="672.0" onAction="#actionNovoContato" style="-fx-background-color: white;" text="Novo Contato">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/contato-novo-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="236.0" layoutY="672.0" onAction="#actionMeusContatos" style="-fx-background-color: white;" text="Meus Contatos">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="34.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/contatos-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="32.0" layoutY="751.0" onAction="#actionNotasVersao" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: white;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/info-nota.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Text fill="WHITE" layoutX="26.0" layoutY="810.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Notas da Versão" textAlignment="CENTER" wrappingWidth="64.00001049041748" />
+                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="351.0" layoutY="186.0" onAction="#actionAtualizaLembrete" prefHeight="36.0" prefWidth="35.0" style="-fx-background-color: white;" text=" " AnchorPane.rightAnchor="23.0">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/atualiza-tabela-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" layoutX="243.0" layoutY="584.0" onAction="#actionAdicionarLembrete" style="-fx-background-color: white;" text="Adicionar Lembrete" textFill="#030000" AnchorPane.rightAnchor="23.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="320.0" layoutY="751.0" onAction="#actionReportarErros" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: white;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/reportar-erro-icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Text fill="WHITE" layoutX="314.0" layoutY="815.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reportar Erros" />
+                  <JFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="174.0" layoutY="751.0" onAction="#actionRestaurarVersao" prefHeight="44.0" prefWidth="52.0" style="-fx-background-color: white;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/img/restaurar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <Text fill="WHITE" layoutX="158.0" layoutY="810.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Restaurar Versão Anterior" textAlignment="CENTER" wrappingWidth="87.99998760223389" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../assets/style/home.css">
+               <children>
+                  <AnchorPane prefHeight="111.0" prefWidth="775.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <Label layoutX="344.0" layoutY="24.0" text="Instituto" textFill="WHITE" AnchorPane.rightAnchor="300.0">
+                           <font>
+                              <Font name="Arial" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="481.0" layoutY="24.0" text="Marques" textFill="WHITE" AnchorPane.rightAnchor="150.0">
+                           <font>
+                              <Font name="Arial Bold" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="636.0" layoutY="24.0" text="Paiva" textFill="WHITE" AnchorPane.rightAnchor="51.0">
+                           <font>
+                              <Font name="Arial" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="525.0" layoutY="65.0" text="Formando Profissionais" textFill="#fcf9f9" AnchorPane.rightAnchor="51.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <JFXTabPane layoutX="100.0" layoutY="241.0" tabMaxHeight="250.0" tabMaxWidth="250.0" tabMinHeight="50.0" tabMinWidth="140.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="115.0">
+                     <tabs>
+                        <Tab styleClass="tab-cadastros" text="Cadastros">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="25.0" minHeight="113.0" minWidth="174.0" onAction="#actionFazerMatriculas" style="-fx-background-color: white;" text="Fazer Matrícula" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/matricula.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="32.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="25.0" onAction="#actionCadastrarCursos" prefHeight="113.0" prefWidth="174.0" style="-fx-background-color: white;" text="Cadastrar Curso" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/cursos-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="522.0" layoutY="33.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="225.0" onAction="#actionCadastrarFuncionarios" prefHeight="113.0" prefWidth="174.0" style="-fx-background-color: white;" text="Cadastrar Funcionário" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/funcionario-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="32.0" layoutY="183.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <Separator layoutX="312.0" layoutY="185.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <Separator layoutX="578.0" layoutY="183.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="301.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionCadastrarUsuarios" style="-fx-background-color: white;" text="Cadastrar Usuário" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/usuarios_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionCadastrarTurmas" style="-fx-background-color: white;" text="Cadastrar Turma" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/turma_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="232.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <Separator layoutX="522.0" layoutY="232.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="304.0" layoutY="25.0" maxHeight="119.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionMatricularAlunoEmCurso" prefWidth="174.0" style="-fx-background-color: white;" text="Matricular Aluno em Curso" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/matricula_aluno.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab styleClass="tab-gerencia" text="Gerência">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionAlunosMatriculados" style="-fx-background-color: white;" text="Alunos Matrículados" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/funcionarios_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="32.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="304.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionFrequenciaAlunos" style="-fx-background-color: white;" text="Frequência de Alunos" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/frequencia_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="522.0" layoutY="33.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="26.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionTurmas" style="-fx-background-color: white;" text="Turmas">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/turma_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="32.0" layoutY="183.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionCursos" style="-fx-background-color: white;" text="Cursos">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/cursos-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="232.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="304.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionFuncionarios" style="-fx-background-color: white;" text="Funcionários">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/funcionario-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="312.0" layoutY="185.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <Separator layoutX="522.0" layoutY="232.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <Separator layoutX="578.0" layoutY="185.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionUsuarios" style="-fx-background-color: white;" text="Usuários">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/usuarios_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab styleClass="tab-financeiro" text="Financeiro">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionContasAReceber" style="-fx-background-color: white;" text="Contas a Receber" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/contas_a_pagar_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="32.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="304.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionGerarContas" style="-fx-background-color: white;" text="Gerar Contas" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/gerar_conta_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="522.0" layoutY="33.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionMeuCaixa" style="-fx-background-color: white;" text="Meu Caixa" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/caixa-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="32.0" layoutY="183.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <Separator layoutX="251.0" layoutY="232.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionGerarParcela" style="-fx-background-color: white;" text="Gerar Parcela" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/parcelas_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab styleClass="tab-relatorios" text="Relatório">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="25.0" minHeight="113.0" minWidth="174.0" onAction="#actionMatriculaRelatorio" style="-fx-background-color: white;" text="Matrículas Efetuadas" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/grafico-alunos-icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="251.0" layoutY="32.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="304.0" layoutY="25.0" minHeight="113.0" minWidth="174.0" onAction="#actionGerarRelatorioMensalidades" style="-fx-background-color: white;" text="Relatórios de Mensalidades" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/relatorio_mensalidade_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="532.0" layoutY="33.0" orientation="VERTICAL" prefHeight="95.0" prefWidth="0.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="570.0" layoutY="25.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionGerarRelatorioTurma" style="-fx-background-color: white;" text="Relatório de Turma" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/turma_relatorio_icon.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <Separator layoutX="32.0" layoutY="183.0" prefHeight="4.0" prefWidth="158.0" />
+                                    <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="24.0" layoutY="225.0" maxHeight="113.0" maxWidth="174.0" minHeight="113.0" minWidth="174.0" onAction="#actionGerarRelatorioCaixa" style="-fx-background-color: white;" text="Relatório de Caixa" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="69.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/img/relatorio_caixa.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children></AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs></JFXTabPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

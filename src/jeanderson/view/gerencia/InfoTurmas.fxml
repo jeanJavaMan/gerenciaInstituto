@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="769.0" prefWidth="600.0" stylesheets="@../../assets/style/TabPane.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.gerencia.InfoTurmasController">
+   <children>
+      <AnchorPane prefHeight="52.0" prefWidth="600.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="220.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações da Turma">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXTabPane layoutY="52.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0">
+         <tabs>
+            <Tab text="Informações da Turma">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <JFXTextField fx:id="txtCodigoTurma" editable="false" focusColor="#13e8a4" labelFloat="true" layoutX="60.0" layoutY="26.0" promptText="Código da Turma">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtHorarioTurma" editable="false" focusColor="#13e8a4" labelFloat="true" layoutX="366.0" layoutY="26.0" promptText="Horário da Turma">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtLimiteAlunos" editable="false" focusColor="#13e8a4" labelFloat="true" layoutX="60.0" layoutY="80.0" promptText="Limite de Alunos">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="txtQuantidadeAlunos" editable="false" focusColor="#13e8a4" labelFloat="true" layoutX="366.0" layoutY="80.0" promptText="Quantidade de Alunos">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="cbCurso" editable="true" focusColor="#16c0da" labelFloat="true" layoutX="60.0" layoutY="139.0" prefHeight="27.0" prefWidth="227.0" promptText="Curso Referente" />
+                        <Text layoutX="243.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dias da Semana">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <JFXCheckBox fx:id="ccSegunda" layoutX="26.0" layoutY="234.0" text="Segunda" />
+                        <JFXCheckBox fx:id="ccTerca" layoutX="116.0" layoutY="234.0" text="Terça" />
+                        <JFXCheckBox fx:id="ccQuinta" layoutX="262.0" layoutY="234.0" text="Quinta" />
+                        <JFXCheckBox fx:id="ccQuarta" layoutX="186.0" layoutY="234.0" prefHeight="0.0" prefWidth="98.0" text="Quarta" />
+                        <JFXCheckBox fx:id="ccSexta" layoutX="339.0" layoutY="234.0" text="Sexta" />
+                        <JFXCheckBox fx:id="ccSabado" layoutX="410.0" layoutY="234.0" text="Sábado" />
+                        <JFXCheckBox fx:id="ccDomingo" layoutX="493.0" layoutY="234.0" text="Domingo" />
+                        <JFXButton fx:id="btnEditarInformacoes" buttonType="RAISED" layoutX="279.0" layoutY="315.0" onAction="#actionEditarInformacoes" style="-fx-background-color: #474747;" text="Editar Informações" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="454.0" layoutY="315.0" onAction="#actionExcluirTurma" style="-fx-background-color: #474747;" text="Excluir Turma" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Alunos da Turma">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="600.0" stylesheets="@../../assets/style/TableView.css">
+                     <children>
+                        <TableView fx:id="tvAlunoTurmas" layoutX="23.0" layoutY="14.0" onMouseClicked="#mouseClickAlunos" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                          <columns>
+                            <TableColumn fx:id="tcMatriculaAlunoTurma" prefWidth="102.0" text="Matrícula" />
+                            <TableColumn fx:id="tcNomeAlunoTurma" prefWidth="454.0" text="Nome" />
+                          </columns>
+                        </TableView>
+                        <JFXButton fx:id="btnAdicionarAluno" buttonType="RAISED" layoutX="300.0" layoutY="220.0" onAction="#actionAdicionarAluno" style="-fx-background-color: #474747;" text="Adicionar Aluno" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="452.0" layoutY="220.0" onAction="#actionRemoverAluno" style="-fx-background-color: #474747;" text="Remover Aluno" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <Separator fx:id="spLado" layoutY="298.0" prefHeight="3.0" prefWidth="228.0" />
+                        <Text fx:id="textAdicionarAluno" layoutX="244.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Aluno">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <TableView fx:id="tvAlunos" layoutX="20.0" layoutY="384.0" prefHeight="233.0" prefWidth="560.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                           <columns>
+                              <TableColumn fx:id="tcMatricula" prefWidth="102.0" text="Matrícula" />
+                              <TableColumn fx:id="tcNome" prefWidth="309.0" text="Nome" />
+                              <TableColumn fx:id="tcCPF" prefWidth="145.0" text="CPF" />
+                           </columns>
+                        </TableView>
+                        <JFXTextField fx:id="txtMatricula" labelFloat="true" layoutX="20.0" layoutY="357.0" prefHeight="19.0" prefWidth="103.0" promptText="Matricula" />
+                        <JFXTextField fx:id="txtNome" labelFloat="true" layoutX="125.0" layoutY="357.0" prefHeight="25.0" prefWidth="305.0" promptText="Nome" />
+                        <JFXTextField fx:id="txtCPF" labelFloat="true" layoutX="432.0" layoutY="357.0" prefHeight="25.0" prefWidth="144.0" promptText="CPF" />
+                        <JFXButton fx:id="btnFiltrar" buttonType="RAISED" layoutX="522.0" layoutY="322.0" onAction="#actionFiltrar" style="-fx-background-color: #474747;" text="Filtrar" textFill="WHITE" />
+                        <JFXButton fx:id="btnAdiciona" buttonType="RAISED" layoutX="386.0" layoutY="624.0" onAction="#actionAdiciona" style="-fx-background-color: #474747;" text="Adicionar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btnCancela" buttonType="RAISED" layoutX="497.0" layoutY="624.0" onAction="#actionCancelar" style="-fx-background-color: #474747;" text="Cancelar" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </JFXButton>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="570.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.usuario.NovoContatoController">
+   <children>
+      <AnchorPane prefHeight="86.0" prefWidth="600.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#fcfafa" layoutX="188.0" layoutY="50.0" stroke="#110000" strokeMiterLimit="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adicionar Novo Contato" textAlignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtNome" labelFloat="true" layoutX="14.0" layoutY="105.0" prefHeight="24.0" prefWidth="538.0" promptText="Nome">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtTelefone" labelFloat="true" layoutX="14.0" layoutY="148.0" prefHeight="24.0" prefWidth="169.0" promptText="Telefone">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbSituacao" labelFloat="true" layoutX="14.0" layoutY="200.0" prefHeight="27.0" prefWidth="268.0" promptText="Situação" />
+      <JFXComboBox fx:id="cbCurso" labelFloat="true" layoutX="14.0" layoutY="262.0" prefHeight="19.0" prefWidth="268.0" promptText="Curso de Interesse" />
+      <JFXCheckBox fx:id="ccLembrete" layoutX="14.0" layoutY="321.0" text="Adicionar no Lembrete?">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXCheckBox>
+      <JFXTextArea fx:id="txtObservacao" labelFloat="true" layoutX="26.0" layoutY="380.0" prefHeight="86.0" prefWidth="514.0" promptText="Observação" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton buttonType="RAISED" layoutX="441.0" layoutY="494.0" onAction="#actionSalvar" prefHeight="37.0" prefWidth="99.0" style="-fx-background-color: white;" text="Salvar">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="dpDataLembrar" defaultColor="#e41e04" layoutX="244.0" layoutY="318.0" promptText="Lembrar na Data" visible="false" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27/06/2017, 22:45:51
+    Author     : jeanderson
+*/
+.tab-cadastros{
+    -fx-background-image:url("../img/cadastros_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px;
+    -fx-background-position: left;   
+
+}
+.tab-gerencia{
+    -fx-background-image:url("../img/informacoes_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px;
+    -fx-background-position: left;
+}
+.tab-financeiro{
+    -fx-background-image:url("../img/financeiro_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px;
+    -fx-background-position: left;
+}
+.tab-relatorios{
+    -fx-background-image:url("../img/relatorio_icon.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 40px;
+    -fx-background-position: left;
+}
+.jfx-tab-pane .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: normal;
+    -fx-font-size: 13;
+}
+.jfx-tab-pane .headers-region {
+    -fx-background-color: #474747;
+}
+.jfx-tab-pane .tab-header-background {
+    -fx-background-color: #474747;
+}
+.jfx-tab-pane .tab-selected-line {
+    -fx-stroke: #75bc1b;
+    -fx-stroke-width: 3pt;
+    -fx-background-color: red; /* When this */   
+}
+.jfx-tab-pane .tab:selected {
+    -fx-background-color: #696969; /* When this */       
+}
+
+

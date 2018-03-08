@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="530.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminBancoDeDados">
+   <children>
+      <Text layoutX="285.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Configurações do Banco de Dados">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtIP" focusColor="#e82b17" labelFloat="true" layoutX="76.0" layoutY="78.0" promptText="IP do servidor" text="localhost">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPorta" focusColor="#e82b17" labelFloat="true" layoutX="572.0" layoutY="78.0" promptText="Porta do Servidor" text="3306">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNome" focusColor="#e82b17" labelFloat="true" layoutX="76.0" layoutY="153.0" promptText="Nome do Banco">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUsuario" focusColor="#e82b17" labelFloat="true" layoutX="76.0" layoutY="228.0" promptText="Usuário">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtSenha" focusColor="#e82b17" labelFloat="true" layoutX="572.0" layoutY="228.0" promptText="Senha">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="452.0" layoutY="340.0" onAction="#actionSalvar" prefHeight="124.0" prefWidth="143.0" style="-fx-background-color: white;" text="Salvar">
+         <graphic>
+            <ImageView fitHeight="93.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../jeanderson/assets/img/salvar_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="20.0" />
+         </font>
+      </JFXButton>
+      <JFXButton alignment="BOTTOM_CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="662.0" layoutY="340.0" onAction="#actionTestarBanco" prefHeight="124.0" prefWidth="143.0" style="-fx-background-color: white;" text="Testar Banco">
+         <graphic>
+            <ImageView fitHeight="93.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../jeanderson/assets/img/database_icon.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font size="17.0" />
+         </font>
+      </JFXButton>
+      <JFXSpinner fx:id="spCarregando" layoutX="86.0" layoutY="394.0" radius="20.0" />
+      <Text fx:id="txtTestando" layoutX="151.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Testando banco de dados... Aguarde" />
+   </children>
+</AnchorPane>

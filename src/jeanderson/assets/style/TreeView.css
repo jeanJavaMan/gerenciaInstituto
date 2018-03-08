@@ -1,0 +1,28 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 01/09/2017, 14:44:04
+    Author     : jeand
+*/
+.tree-view, .tree-cell {
+    -fx-text-fill: white;
+    -fx-font: 15px Tahoma;
+    -fx-background-color: #474747;
+}
+.tree-cell:expanded, .tree-cell:sub-tree-item {
+    -fx-background-color: #404040 ;
+}
+.tree-cell:selected {
+    -fx-font-weight: bold ;
+    -fx-text-fill: white ;
+}
+.tree-cell {
+    -fx-padding: 0.75em 0em 0.75em 0em ;
+}
+/*.tree-cell:sub-tree-item {
+    -fx-padding: 0.25em ;
+}*/
+

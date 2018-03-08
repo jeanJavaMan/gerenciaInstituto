@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="1115.0" stylesheets="@../../assets/style/TableView.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.financeiro.ContasReceberController">
+   <children>
+      <TableView fx:id="tbMensalidade" layoutX="14.0" layoutY="180.0" onMouseClicked="#mouseClickTabela" prefHeight="309.0" prefWidth="1015.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="180.0">
+         <columns>
+            <TableColumn fx:id="tcAluno" prefWidth="263.0" text="Nome do Aluno" />
+            <TableColumn fx:id="tcParcelaNumero" prefWidth="105.0" style="-fx-alignment: center;" text="Parcela Número" />
+            <TableColumn fx:id="tcTipoMensalidade" prefWidth="96.0" text="Tipo" />
+            <TableColumn fx:id="tcFormaPagamento" prefWidth="146.0" text="Forma de Pagamento" />
+            <TableColumn fx:id="tcDataVencimento" prefWidth="126.0" style="-fx-alignment: center;" text="Data vencimento" />
+            <TableColumn fx:id="tcSituacao" prefWidth="124.0" style="-fx-alignment: center;" text="Situação" />
+            <TableColumn fx:id="tcSituacaoVencimento" prefWidth="140.0" text="Situacao Vencimento" />
+            <TableColumn fx:id="tcValor" prefWidth="67.0" style="-fx-alignment: center;" text="Valor(R$)" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtLimite" focusColor="#e82412" labelFloat="true" layoutX="953.0" layoutY="507.0" prefHeight="28.0" prefWidth="76.0" promptText="Limite" text="50" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="14.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Separator fx:id="spCima1" layoutX="6.0" layoutY="22.0" prefWidth="200.0" />
+      <Label fx:id="lbFiltra" layoutX="214.0" layoutY="14.0" text="Filtro Extra" />
+      <Separator fx:id="spCima2" layoutX="301.0" layoutY="21.0" prefHeight="3.0" prefWidth="145.0" />
+      <Separator fx:id="spLado" layoutX="447.0" layoutY="30.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="5.0" />
+      <Label fx:id="lbValor" layoutX="14.0" layoutY="49.0" text="Por Valor(R$):" />
+      <JFXTextField fx:id="txtValorInicial" focusColor="#01e162" labelFloat="true" layoutX="110.0" layoutY="37.0" prefHeight="28.0" prefWidth="87.0" promptText="Valor Inicial">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lbAte1" layoutX="201.0" layoutY="49.0" text="até" />
+      <JFXTextField fx:id="txtValorMaximo" focusColor="#01e162" labelFloat="true" layoutX="228.0" layoutY="37.0" prefHeight="28.0" prefWidth="96.0" promptText="Valor Máximo">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Label fx:id="lbData" layoutX="44.0" layoutY="100.0" text="Por Data:" />
+      <JFXDatePicker fx:id="dpVencimentoInicial" layoutX="110.0" layoutY="95.0" prefHeight="28.0" prefWidth="145.0" promptText="De" />
+      <JFXDatePicker fx:id="dpVencimentoFinal" layoutX="265.0" layoutY="95.0" prefHeight="28.0" prefWidth="145.0" promptText="Até" />
+      <JFXTextField fx:id="txtAluno" focusColor="#01e162" labelFloat="true" layoutX="14.0" layoutY="149.0" prefHeight="29.0" prefWidth="265.0" promptText="Aluno" AnchorPane.leftAnchor="14.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtParcelaNumero" focusColor="#01e162" labelFloat="true" layoutX="281.0" layoutY="149.0" prefHeight="29.0" prefWidth="105.0" promptText="Parcela Número">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cbTipo" focusColor="#0aeb60" labelFloat="true" layoutX="388.0" layoutY="150.0" prefHeight="28.0" prefWidth="92.0" promptText="Tipo" />
+      <JFXComboBox fx:id="cbFormaPagamento" focusColor="#0aeb60" labelFloat="true" layoutX="480.0" layoutY="150.0" prefHeight="28.0" prefWidth="145.0" promptText="Forma de Pagamento" />
+      <JFXDatePicker fx:id="dpVencimento" layoutX="625.0" layoutY="150.0" prefHeight="28.0" prefWidth="132.0" promptText="Vencimento" />
+      <JFXComboBox fx:id="cbSituacao" focusColor="#0aeb60" labelFloat="true" layoutX="757.0" layoutY="150.0" prefHeight="28.0" prefWidth="116.0" promptText="Situação" />
+      <JFXComboBox fx:id="cbSituacaoVencimento" focusColor="#0aeb60" labelFloat="true" layoutX="873.0" layoutY="150.0" prefHeight="28.0" prefWidth="145.0" promptText="Situação Vencimento" />
+      <JFXButton buttonType="RAISED" layoutX="942.0" layoutY="58.0" onAction="#actionAtualizar" style="-fx-background-color: #474747;" text="Atualizar" textFill="WHITE" AnchorPane.rightAnchor="23.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="962.0" layoutY="103.0" onAction="#actionFiltrar" style="-fx-background-color: #474747;" text="Filtrar" textFill="WHITE" AnchorPane.rightAnchor="23.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXCheckBox fx:id="ccFiltroExtra" layoutX="817.0" layoutY="109.0" text="Filtro Extra" AnchorPane.rightAnchor="134.0" />
+      <HBox layoutX="380.0" layoutY="499.0" prefHeight="17.0" prefWidth="215.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="380.0" AnchorPane.rightAnchor="520.0">
+         <children>
+            <Pane prefHeight="17.0" prefWidth="21.0" style="-fx-background-color: red;" />
+            <Label fx:id="lbQuantidadeMensalidadeVencida" text="0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mensalidade(s) Vencida(s)">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+      <HBox layoutX="598.0" layoutY="499.0" prefHeight="17.0" prefWidth="223.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="620.0">
+         <children>
+            <Pane prefHeight="17.0" prefWidth="21.0" style="-fx-background-color: orange;" />
+            <Label fx:id="lbQuantidadeMatriculaVencida" text="0">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Matrícula(s) Vencida(s)">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

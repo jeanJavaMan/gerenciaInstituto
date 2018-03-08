@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.cadastro.CadastraUsuarioController">
+   <children>
+      <AnchorPane prefHeight="64.0" prefWidth="600.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="215.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastrar Usuário">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXComboBox fx:id="cbFuncionario" focusColor="#0b02ff" labelFloat="true" layoutX="46.0" layoutY="80.0" prefHeight="27.0" prefWidth="343.0" promptText="Selecione o Funcionario" />
+      <JFXTextField fx:id="txtUsuario" focusColor="#0ca15b" labelFloat="true" layoutX="213.0" layoutY="159.0" promptText="Usuário">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="txtSenha" focusColor="#0f9a65" labelFloat="true" layoutX="213.0" layoutY="214.0" promptText="Senha">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXButton buttonType="RAISED" layoutX="389.0" layoutY="290.0" onAction="#actionCadastrar" style="-fx-background-color: #474747;" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

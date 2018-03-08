@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXSpinner?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.usuario.ReportaErroController">
+   <children>
+      <AnchorPane prefHeight="43.0" prefWidth="600.0" style="-fx-background-color: #474747;">
+         <children>
+            <Text fill="WHITE" layoutX="237.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reportar Erros">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXTextArea fx:id="txtMensagem" labelFloat="true" layoutX="68.0" layoutY="125.0" prefHeight="95.0" prefWidth="464.0" promptText="Mensagem" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextArea>
+      <Text layoutX="81.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sua mensagem e todos os erros registrados, serão enviados para o desenvolvedor." />
+      <JFXButton buttonType="RAISED" layoutX="450.0" layoutY="333.0" onAction="#actionReportar" style="-fx-background-color: #474747;" text="Reportar " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="txtNome" labelFloat="true" layoutX="68.0" layoutY="62.0" prefHeight="29.0" prefWidth="464.0" promptText="Seu Nome">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXSpinner fx:id="spEnviando" layoutX="81.0" layoutY="317.0" />
+      <Text fx:id="txtEnviando" layoutX="127.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enviando... Aguarde" />
+   </children>
+</AnchorPane>

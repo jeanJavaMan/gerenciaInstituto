@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="496.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeanderson.controller.gerencia.InfoCursos">
+   <children>
+      <AnchorPane prefHeight="58.0" prefWidth="605.0" style="-fx-background-color: #474747;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="WHITE" layoutX="210.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações do Curso">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <JFXTextField fx:id="txtCodigo" focusColor="#1dc637" labelFloat="true" layoutX="71.0" layoutY="82.0" promptText="Código" AnchorPane.bottomAnchor="385.0" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="82.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtNome" focusColor="#1dc637" labelFloat="true" layoutX="71.0" layoutY="133.0" prefHeight="29.0" prefWidth="463.0" promptText="Nome" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="70.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCargaHoraria" focusColor="#1dc637" labelFloat="true" layoutX="71.0" layoutY="193.0" promptText="Carga Horária" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="365.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtValor" focusColor="#1dc637" labelFloat="true" layoutX="365.0" layoutY="193.0" promptText="Valor (R$)" AnchorPane.rightAnchor="71.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="txtInformacoes" focusColor="#288d3d" labelFloat="true" layoutX="71.0" layoutY="248.0" prefHeight="112.0" prefWidth="463.0" promptText="Informações" wrapText="true" AnchorPane.leftAnchor="71.0" AnchorPane.rightAnchor="71.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextArea>
+      <JFXButton fx:id="btnEditar" buttonType="RAISED" layoutX="392.0" layoutY="390.0" onAction="#actionEditar" style="-fx-background-color: #474747;" text="Editar" textFill="WHITE" AnchorPane.rightAnchor="155.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="476.0" layoutY="390.0" onAction="#actionExcluir" style="-fx-background-color: #474747;" text="Excluir" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
